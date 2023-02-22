@@ -51,9 +51,7 @@ def main():
                 }
             
         features_df = pd.DataFrame.from_dict([data])
-        st.markdown("<h3></h3>", unsafe_allow_html=True)
         
-        st.dataframe(features_df)
         st.write("""Now all you have to do is click to Predict!""")
         
         if st.button('Predict'):
