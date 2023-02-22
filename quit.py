@@ -9,11 +9,6 @@ model = tf.keras.models.load_model('hr-model.h5')
 
 @st.cache
 
-def preprocess(df, option):
-    scaler=StandardScaler()
-    scaled_hr_data=scaler.fit_transform(df)
-    return df
-
 def main():
     #Setting Application title
     st.title('uShipper Attrition Dashboard')
@@ -60,8 +55,6 @@ def main():
         features_df = pd.DataFrame.from_dict([data])
         st.markdown("<h3></h3>", unsafe_allow_html=True)
         
-        st.write("""Here's a handy recap of the data you provided:""")
-        st.markdown("<h3></h3>", unsafe_allow_html=True)
         st.dataframe(features_df)
         st.write("""Now all you have to do is click to Predict!""")
         
