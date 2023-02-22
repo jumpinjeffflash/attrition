@@ -4,11 +4,6 @@ import tensorflow as tf
 import numpy as np
 import pandas as pd
 
-import sklearn
-from sklearn.preprocessing import StandardScaler, MinMaxScaler
-
-import random as rn
-
 #Loading up the model we created
 model = tf.keras.models.load_model('hr-model.h5')
 
