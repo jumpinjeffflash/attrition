@@ -7,8 +7,6 @@ import pandas as pd
 #Loading up the model we created
 model = tf.keras.models.load_model('hr-model.h5')
 
-@st.cache
-
 def main():
     #Setting Application title
     st.title('uShipper Attrition Dashboard')
